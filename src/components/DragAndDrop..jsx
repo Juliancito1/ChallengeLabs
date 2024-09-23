@@ -30,7 +30,7 @@ const DragAndDrop = () => {
         <p className="ant-upload-hint">Se utiliza una unica imagen a la vez</p>
       </Dragger>
       <div style={{ marginTop: "20px", marginBottom: "20px" }}>
-        <Inputs />
+        <Inputs image={image} />
       </div>
       {image ? <img src={image} style={{width: "100px", height: "100px"}} alt="imagen subida"></img>  : <></>}
     </>
