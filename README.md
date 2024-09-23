@@ -1,8 +1,20 @@
-# React + Vite
+# Challenge Labs || Template Feliz Cumpleaños
+<img src="https://cdn.cdnlogo.com/logos/r/85/react.svg" width="300"/>
+<img src="https://www.svgrepo.com/show/353401/ant-design.svg" width="300">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repositorio creado para la realización del Challenge Labs.
 
-Currently, two official plugins are available:
+>**IMPORTANTE:** Al clonar el repositorio recordar utilizar el comando npm install en el cmd o terminal de Visual Code
+## Tecnologias / Herramientas ⚒️
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- HTML
+- CSS
+- JavaScript
+- React
+- Ant Design
+
+## Autor 
+Julián Martín [GitHub](https://github.com/Juliancito1)
+
+## Información
+La información para la realización del challenge se realizo consultas en foros de internet o paginas como [Mozilla](https://developer.mozilla.org/es/) y [W3Schools](https://www.w3schools.com/)
