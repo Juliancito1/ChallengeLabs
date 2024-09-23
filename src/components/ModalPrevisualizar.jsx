@@ -95,7 +95,7 @@ const ModalPrevisualizar = ({
         </Button>,
       ]}
     >
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className="contenedorCanvas">
         <canvas ref={imagenRef}></canvas>
       </div>
     </Modal>
