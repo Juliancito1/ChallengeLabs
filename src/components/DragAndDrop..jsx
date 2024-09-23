@@ -28,7 +28,7 @@ const DragAndDrop = () => {
         <p className="ant-upload-text">Arrastra la Foto de la persona aquí</p>
         <p className="ant-upload-hint">Se utiliza una unica imagen a la vez</p>
       </Dragger>
-      <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+      <div className="contenedorInputs">
         <Inputs image={image} />
       </div>
     </>

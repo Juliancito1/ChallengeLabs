@@ -15,10 +15,7 @@ const Inputs = ({ image }) => {
   return (
     <Form
       name="trigger"
-      style={{
-        maxWidth: 2000,
-        justifyContent: "center",
-      }}
+      className="formulario"
       layout="inline"
       autoComplete="off"
     >
@@ -56,7 +53,7 @@ const Inputs = ({ image }) => {
       >
         <InputNumber
           onChange={(value) => setDia(value)}
-          style={{ width: "100%" }}
+          className="inputsNumero"
           placeholder="Dia"
         />
       </Form.Item>
@@ -75,12 +72,12 @@ const Inputs = ({ image }) => {
       >
         <Input
           onChange={(e) => setMes(e.target.value)}
-          style={{ width: "100%" }}
+          className="inputsNumero"
           placeholder="Mes"
         />
       </Form.Item>
       {image && nombre && dia && mes ? (
-        <Form.Item style={{ margin: "10px 0 10px 0px" }}>
+        <Form.Item className="botonPrevisualizar">
           <Button onClick={showModal} type="primary">
             <EyeFilled />
             Previsualizar
@@ -88,7 +85,7 @@ const Inputs = ({ image }) => {
           <ModalPrevisualizar nombre={nombre} dia={dia} mes={mes} image={image} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
         </Form.Item>
       ) : (
-        <Form.Item style={{ margin: "10px 0 10px 0px" }}>
+        <Form.Item className="botonPrevisualizar">
           <Button disabled type="primary">
             <EyeFilled />
             Previsualizar
