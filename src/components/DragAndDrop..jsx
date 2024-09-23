@@ -14,7 +14,6 @@ const DragAndDrop = () => {
       imagen.readAsDataURL(file)
       imagen.onload = () => {
         setImage(imagen.result)
-        console.log(imagen.result)
       }
       return false
     }
@@ -32,7 +31,6 @@ const DragAndDrop = () => {
       <div style={{ marginTop: "20px", marginBottom: "20px" }}>
         <Inputs image={image} />
       </div>
-      {image ? <img src={image} style={{width: "100px", height: "100px"}} alt="imagen subida"></img>  : <></>}
     </>
   );
 };

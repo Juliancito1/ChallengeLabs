@@ -1,10 +1,16 @@
 import { Button, Form, Input, InputNumber } from "antd";
 import { EyeFilled } from "@ant-design/icons";
 import { useState } from "react";
+import ModalPrevisualizar from "./ModalPrevisualizar";
 const Inputs = ({ image }) => {
   const [nombre, setNombre] = useState("");
-  const [edad, setEdad] = useState(null);
+  const [dia, setDia] = useState(null);
   const [mes, setMes] = useState("");
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
 
   return (
     <Form
@@ -49,9 +55,9 @@ const Inputs = ({ image }) => {
         ]}
       >
         <InputNumber
-          onChange={(value) => setEdad(value)}
+          onChange={(value) => setDia(value)}
           style={{ width: "100%" }}
-          placeholder="Edad"
+          placeholder="Dia"
         />
       </Form.Item>
 
@@ -73,12 +79,13 @@ const Inputs = ({ image }) => {
           placeholder="Mes"
         />
       </Form.Item>
-      {image && nombre && edad && mes ? (
+      {image && nombre && dia && mes ? (
         <Form.Item style={{ margin: "10px 0 10px 0px" }}>
-          <Button type="primary">
+          <Button onClick={showModal} type="primary">
             <EyeFilled />
             Previsualizar
           </Button>
+          <ModalPrevisualizar nombre={nombre} dia={dia} mes={mes} image={image} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
         </Form.Item>
       ) : (
         <Form.Item style={{ margin: "10px 0 10px 0px" }}>
