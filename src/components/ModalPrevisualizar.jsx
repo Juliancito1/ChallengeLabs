@@ -72,6 +72,14 @@ const ModalPrevisualizar = ({
     }
   }, [isModalOpen, image]);
 
+  const descargarImagen = () => {
+    const canvas = imagenRef.current;
+    const link = document.createElement('a')
+    link.download = `PlacaCumple${nombre}_image.png`
+    link.href = canvas.toDataURL()
+    link.click()
+  }
+
   return (
     <Modal
       width={1500}
@@ -81,7 +89,7 @@ const ModalPrevisualizar = ({
       onCancel={handleCancel}
       open={isModalOpen}
       footer={[
-        <Button key={1} type="primary">
+        <Button onClick={descargarImagen} key={1} type="primary">
           <DownloadOutlined />
           Descargar
         </Button>,
